@@ -3,6 +3,7 @@ import pygame.font
 from pygame.sprite import Sprite
 import random
 
+
 class Alien1(Sprite):
     def __init__(self, ai_settings, screen, spritesheet):
         super(Alien1, self).__init__()
@@ -11,7 +12,7 @@ class Alien1(Sprite):
 
         self.imageframe = 0
         self.imagerects = ((0, 0, 96, 96), (96, 0, 96, 96), (192, 0, 96, 96),
-                            (288, 0, 96, 96), (384, 0, 96, 96))
+                           (288, 0, 96, 96), (384, 0, 96, 96))
         self.images = spritesheet.images_at(self.imagerects, colorkey=(255, 255, 255))
         self.rect = self.images[0].get_rect()
 
@@ -35,10 +36,10 @@ class Alien1(Sprite):
         elif self.rect.left <= 0:
             return True
 
-
     def update(self):
         self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
         self.rect.x = self.x
+
 
 class Alien2(Sprite):
     def __init__(self, ai_settings, screen, spritesheet):
@@ -48,7 +49,7 @@ class Alien2(Sprite):
 
         self.imageframe = 0
         self.imagerects = ((0, 96, 96, 96), (96, 96, 96, 96), (192, 96, 96, 96),
-                            (288, 96, 96, 96), (384, 96, 96, 96))
+                           (288, 96, 96, 96), (384, 96, 96, 96))
         self.images = spritesheet.images_at(self.imagerects, colorkey=(255, 255, 255))
         self.rect = self.images[0].get_rect()
 
@@ -72,10 +73,10 @@ class Alien2(Sprite):
         elif self.rect.left <= 0:
             return True
 
-
     def update(self):
         self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
         self.rect.x = self.x
+
 
 class Alien3(Sprite):
     def __init__(self, ai_settings, screen, spritesheet):
@@ -85,7 +86,7 @@ class Alien3(Sprite):
 
         self.imageframe = 0
         self.imagerects = ((0, 192, 96, 96), (96, 192, 96, 96), (192, 192, 96, 96),
-                            (288, 192, 96, 96), (384, 192, 96, 96))
+                           (288, 192, 96, 96), (384, 192, 96, 96))
         self.images = spritesheet.images_at(self.imagerects, colorkey=(255, 255, 255))
         self.rect = self.images[0].get_rect()
 
@@ -109,10 +110,10 @@ class Alien3(Sprite):
         elif self.rect.left <= 0:
             return True
 
-
     def update(self):
         self.x += (self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction)
         self.rect.x = self.x
+
 
 class Alien4(Sprite):
     def __init__(self, ai_settings, screen, spritesheet):

@@ -1,6 +1,7 @@
 import pygame.font
 from pygame.transform import scale
 
+
 class Title:
     def __init__(self, screen, msg, line, text_color):
         self.screen = screen
@@ -24,6 +25,7 @@ class Title:
 
     def draw(self):
         self.screen.blit(self.msg_image, self.msg_image_rect)
+
 
 class AlienPoints:
     def __init__(self, screen, spritesheet, ai_settings):

@@ -4,7 +4,7 @@ from pygame.transform import scale
 
 from ship import Ship
 
-class Scoreboard():
+class Scoreboard:
     def __init__(self, ai_settings, screen, stats, spritesheet):
         self.screen = screen
         self.screen_rect = screen.get_rect()
@@ -16,6 +16,14 @@ class Scoreboard():
 
         self.text_color = (200, 200, 200)
         self.font = pygame.font.SysFont(None, 36)
+
+        self.score_image = None
+        self.score_rect = None
+        self.high_score_image = None
+        self.high_score_rect = None
+        self.level_image = None
+        self.level_rect = None
+        self.ships = None
 
         self.prep_score()
         self.prep_high_score()

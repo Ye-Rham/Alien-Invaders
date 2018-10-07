@@ -22,7 +22,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Space Invaders")
-    spritesheet = SpriteSheet('Spritesheet.png')
+    spritesheet = SpriteSheet('Spritesheet.png', screen)
     title1 = Title(screen, "SPACE", 0, (200, 200, 200))
     title2 = Title(screen, "INVADERS", 50, (20, 200, 20))
     title3 = Title(screen, "HIGH SCORES", 0, (200, 200, 200))

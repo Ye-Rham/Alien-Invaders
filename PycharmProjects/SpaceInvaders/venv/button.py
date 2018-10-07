@@ -1,7 +1,7 @@
 import pygame.font
 
-class Button():
 
+class Button:
     def __init__(self, ai_settings, screen, msg, y):
         self.screen = screen
         self.screen_rect = screen.get_rect()
@@ -16,6 +16,8 @@ class Button():
         self.rect.centery = y
 
         self.msg = msg
+        self.msg_image = None
+        self.msg_image_rect = None
         self.prep_msg(msg)
 
     def prep_msg(self, msg):
